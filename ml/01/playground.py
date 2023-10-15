@@ -54,31 +54,44 @@ from sklearn.decomposition import PCA
 from sklearn.ensemble import ExtraTreesClassifier
 from sklearn.linear_model import SGDClassifier        
 
-dataset = pd.read_csv('./data.csv')
+# dataset = pd.read_csv('./data.csv')
 
-dataset.head()
+# dataset.head()
 
-# dataset.info()
-print(dataset.info());
+# # dataset.info()
+# print(dataset.info());
 
-dataset = dataset.drop(labels=['id','Unnamed: 32'],axis = 1)
+# dataset = dataset.drop(labels=['id','Unnamed: 32'],axis = 1)
 
-features = dataset.iloc[:,1:]
-labels = dataset.iloc[:,0].values
-
-
-f,ax = plt.subplots(figsize=(18, 18))
-sns.heatmap(features.corr(), annot=True, linewidths=.5, fmt= '.1f',ax=ax)
+# features = dataset.iloc[:,1:]
+# labels = dataset.iloc[:,0].values
 
 
-to_be_dropped = ['perimeter_mean','radius_mean','compactness_mean',
-                 'concave points_mean','radius_se','perimeter_se',
-                 'radius_worst','perimeter_worst','compactness_worst',
-                 'concave points_worst','compactness_se','concave points_se',
-                 'texture_worst','area_worst']
+# f,ax = plt.subplots(figsize=(18, 18))
+# sns.heatmap(features.corr(), annot=True, linewidths=.5, fmt= '.1f',ax=ax)
 
 
-features_temp = features.drop(to_be_dropped,axis = 1) 
+# to_be_dropped = ['perimeter_mean','radius_mean','compactness_mean',
+#                  'concave points_mean','radius_se','perimeter_se',
+#                  'radius_worst','perimeter_worst','compactness_worst',
+#                  'concave points_worst','compactness_se','concave points_se',
+#                  'texture_worst','area_worst']
 
-f,ax = plt.subplots(figsize=(14, 14))
-sns.heatmap(features_temp.corr(), annot=True, linewidths=.5, fmt= '.1f',ax=ax)
+
+# features_temp = features.drop(to_be_dropped,axis = 1) 
+
+# f,ax = plt.subplots(figsize=(14, 14))
+# sns.heatmap(features_temp.corr(), annot=True, linewidths=.5, fmt= '.1f',ax=ax)
+
+
+# Assuming your data.csv file is in the same directory as your script
+# file_path = r'd:\الكلية سنة رابعة\labs\ml\01\data.csv'
+
+# # Load the CSV file into a DataFrame
+# df = pd.read_csv(file_path)
+
+# # Assuming you want to create a simple scatter plot of two columns
+# sns.scatterplot(data=df, x='column_name_x', y='column_name_y')
+
+# # Show the plot
+# plt.show()
